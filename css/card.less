@@ -1,0 +1,328 @@
+/*Parametros de cards por deafult*/
+.card{
+    margin: 12px 0;
+    cursor: pointer;
+    border: none;
+    a{
+        text-decoration: none;
+    }
+    .card-img-top-bg{
+        background-size:cover !important;background-repeat:no-repeat !important;background-position:center !important;
+        position: relative;
+        height: 268px;
+        filter: saturate(90%);
+        .overlay{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(fade(@colorPrincipal,50%), fade(@colorDark,45%));
+            top: 0;
+            left: 0;
+
+        }
+        .cardLocation{
+            position: absolute;
+            bottom: 0;
+            background: linear-gradient(0deg, @colorPrincipal 65%, transparent);
+            width: 100%;
+            padding: 8px;
+            text-align: center;
+            .fas{
+                color: @colorWhite;
+            }
+            .cardLocationTitle{
+                color: @colorWhite;
+            }
+        }
+        .cardLogos{
+            position: absolute;
+            top: 5px;
+            left: 9px;
+            img{
+                width: 30%;
+            }
+            
+        }
+    }
+    .card-body{/*card body*/
+        padding: 0 !important;
+        .cardLocation{
+            text-align: center;
+            color: @colorLight;
+            padding: 8px;
+        }
+        .cardRating{
+            .rating{
+                display: flex;
+                list-style: none;
+                padding:0;
+                justify-content: center;
+                margin: 0;
+                li{
+                    padding-right: 6px;
+                    i{
+                        color: @colorPrincipal;
+                    }
+                }
+            }
+        }
+        .cardNameHotel{
+            padding-top: 12px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            .fontFamilyTitle;
+
+            h5{
+                color: @colorPrincipal;
+                margin: 0;
+            } 
+            hr{
+                border-color: @colorPrincipal;
+                width: 100%;
+            }
+            .withOutMarges{
+                margin-bottom: 0;
+            }
+        }
+        .designField{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 0;
+            i{
+                padding-right: 6px;
+                color: @colorPrincipal;
+            }
+            .nameField{
+                color: @colorPrincipal;
+            }
+        }
+        .cardRoom{
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 0 ;
+            div{
+                span{
+                    color:@colorNeutro; 
+                }
+                i{
+                    padding-right: 3px;
+                    color: @colorPrincipal;
+                    
+                }
+            }
+        
+        }
+        .cardHome{
+            display: flex;
+            justify-content:center;
+            padding: 5px 18px;
+            text-align: center;
+            background: @colorPrincipal;
+            
+            div{
+                display: flex;
+                flex-flow: column;
+                padding: 4px;
+                justify-content: space-between;
+                border-right: 1px solid white;
+                width: 50%;
+                opacity: 1;
+                transition: all 0.5s ease;
+                color:@colorWhite;
+                span{
+                    color:brown;
+                    
+                }
+                i{
+                    padding-right: 3px;
+                   /* color: @colorWhite;*/
+                   
+                    
+                }
+              &:last-child{
+                border: none;
+             }
+             &:hover{
+                opacity: 0.3;
+                color:@colorLight;
+
+             } 
+            }
+        }
+        .cardCheck{
+            display: flex;
+            justify-content: space-around;
+            div{
+                span{
+                    color: @colorNeutro;
+                    i{
+                        color: @colorPrincipal;
+                    }
+                }
+                p{
+                    color: @colorPrincipal;
+                    font-weight: bold;
+                }
+            }
+        }
+        .cardPriceThough{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            padding: 8px 0;
+            .text-though{
+                color: @colorNeutro;
+                padding-right: 8px;
+            }
+            .price-though{
+                font-weight: bold;
+                text-decoration: line-through;
+               
+            }
+
+        }
+        .cardPriceFinal{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            .exclusiveRate{
+                padding-bottom: 12px;
+                display: flex;
+                flex-flow: column;
+                .exclusiveText{
+                    color: @colorNeutro;
+                }
+                .card-price__total{
+                    font-weight: bold;
+                  
+                    color: @colorPrincipal;
+                }
+                .blPrice{
+                    color: @colorWhite;
+                    .moneySymbol{
+                        
+                        padding-right: 3px;
+                        
+                    }
+                    .number{
+                       
+                        font-weight: 900;
+
+                    }
+                    .currencySymbol{
+                        padding-left: 3px;
+
+
+                    }
+                }
+            }
+            .exclusiveRateCrusie{
+                flex-flow: row;
+                align-items: center;
+                padding: 0;
+                .exclusiveText{
+                    padding-right: 8px;
+                }
+            }
+            .exclusiveRateHome{
+                flex-flow: row;
+                align-items: center;
+                padding: 6px;
+                span{
+                    padding-right: 12px;
+                }
+                
+            }
+            .divider{
+                margin-left: 12px;
+            }
+            
+            .porcent{
+                width: 20%;
+                color: @colorPrincipal;
+                margin-left: 12px;
+                    line-height: 13px;
+                .numberPorcent{
+                    font-weight: 700;
+                    margin: 0;
+                    
+                }
+            }
+            .porcentGolf{
+                line-height: 0px;
+            }
+        }
+        .cardPriceCruise{
+            background: @colorPrincipal;
+            color: @colorWhite !important;
+        }
+        /*style de precio final en horizontal*/
+        .cardPriceType-2{
+            flex-flow: column;
+            padding: 18px 0 0 0;
+            .exclusiveRate{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                align-items: center;
+                span{
+                    margin: 0;
+                }
+            }
+            .divider{
+                display: none;
+            }
+            .porcent{
+                display: flex;
+                justify-content: center;
+                background: @colorLight;
+                width: 100%;
+                align-items: center;
+                color: @colorPrincipal;
+                padding-top: 8px;
+                .numberPorcent{
+                    font-weight: 700;
+                    margin: 0;
+                }
+
+            }
+        }
+    }/*Card body*/
+    /*Alternatives*/
+    
+    .card-footer{
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: center;
+        .rights{
+            text-align: center;
+            span{
+                
+                color: lighten(@colorLight, 1%) !important;
+            }
+        }
+        .btns{
+            padding: 12px;
+            width: 100%;
+            .btn-card{
+                width: 100%;
+                &:hover{
+                    border-color: @colorPrincipal; 
+                    .btnText{
+                        color: @colorWhite;
+                    }
+                    .btnBg2{
+                        left: 0;
+                        opacity: 1;
+                    }
+                }
+            }
+        } 
+    } 
+}
